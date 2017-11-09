@@ -19,14 +19,14 @@ vrrp_script chk_haproxy {
 
 vrrp_instance vips {
   state BACKUP
-  interface {{ $iface }}
+  interface public
   virtual_router_id {{ .vrid }}
   priority {{ .priority }}
   nopreempt
   advert_int 1
 
   track_interface {
-    {{ $iface }}
+    public
   }
 
   {{ if .useUnicast }}
