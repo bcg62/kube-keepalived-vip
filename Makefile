@@ -2,9 +2,9 @@ all: push
 
 # 0.0 shouldn't clobber any release builds
 TAG = 0.23
-PREFIX = aledbf/kube-keepalived-vip
+PREFIX = bcg62/kube-keepalived-vip
 BUILD_IMAGE = build-keepalived
-PKG = github.com/aledbf/kube-keepalived-vip
+PKG = github.com/bcg62/kube-keepalived-vip
 
 GO_LIST_FILES=$(shell go list ${PKG}/... | grep -v vendor)
 
